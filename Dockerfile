@@ -1,4 +1,4 @@
-FROM python:3.13-slim
+FROM python:3.12-slim
 
 WORKDIR /app
 
@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 8501
 
-uv run app
+CMD ["uv","run","streamlit", "run", "app/streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
