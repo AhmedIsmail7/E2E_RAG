@@ -66,7 +66,7 @@ with col3:
 # -----------------------------------------------------------------------------
 # 5. HIGH-ADVANCED FEATURE: ISOLATED RENDERING VIA FRAGMENTS
 # -----------------------------------------------------------------------------
-@st.fragment(run_every="5s")
+@st.experimental_fragment(run_every="5s")
 def live_order_book():
     """Reruns independently every 5 seconds without triggering global page refreshes."""
     st.subheader("🔄 Isolated Live Order Book Feed (Auto-Refreshes)")
